@@ -8,6 +8,7 @@ function App() {
         <div className="card">
           <div className='card-style'>
             <div className='sidebar-bg'>
+              <ProgressIndicator/>
             </div>
             <div className='card-content'>
       
