@@ -36,32 +36,34 @@ export const SelectPlan = () => {
       }}>
          {({ values }) => (
           <Form className='form'>
-            <div className='radio-form'>
-              <RadioButton
-                name="plan"
-                value="Arcade"
-                label="Arcade"
-                labelinfo={values.billing?"$90/yr":"$9/mo"}
+            <div className='form-content'>
+              <div className='radio-form'>
+                <RadioButton
+                  name="plan"
+                  value="Arcade"
+                  label="Arcade"
+                  labelinfo={values.billing?"$90/yr":"$9/mo"}
                 labelpromo={values.billing?"2 months free":""}
-                logo={<Arcade/>}>Arcade</RadioButton>
-              <RadioButton
-                name="plan"
-                value="Advanced"
-                label="Advanced"
-                labelinfo={values.billing?"$120/yr":"$12/mo"}
+                  logo={<Arcade/>}>Arcade</RadioButton>
+                <RadioButton
+                  name="plan"
+                  value="Advanced"
+                  label="Advanced"
+                  labelinfo={values.billing?"$120/yr":"$12/mo"}
                 labelpromo={values.billing?"2 months free":""}
-                logo={<Advanced/>}>Advanced</RadioButton>
-              <RadioButton
-                name="plan"
-                value="Pro"
-                label="Pro"
-                labelinfo={values.billing?"$150/yr":"$15/mo"}
+                  logo={<Advanced/>}>Advanced</RadioButton>
+                <RadioButton
+                  name="plan"
+                  value="Pro"
+                  label="Pro"
+                  labelinfo={values.billing?"$150/yr":"$15/mo"}
                 labelpromo={values.billing?"2 months free":""}
-                logo={<Pro/>}>Pro</RadioButton>
+                  logo={<Pro/>}>Pro</RadioButton>
+              </div>
+              <Switch
+                name='billing'
+              ></Switch>
             </div>
-            <Switch
-              name='billing'
-            ></Switch>
             <div className='button-wrapper'>
               <button className='button-secondary'> Go Back</button>
                 <button

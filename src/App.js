@@ -1,4 +1,5 @@
 import './App.css';
+import { AddOns } from './components/AddOns';
 import { PersonalInfo } from './components/PersonalInfo';
 import { ProgressIndicator } from './components/ProgressIndicator';
 import { SelectPlan } from './components/SelectPlan';
@@ -14,7 +15,8 @@ function App() {
             </div>
             <div className='card-content'>
               {/* <PersonalInfo/> */}
-              <SelectPlan/>
+              {/* <SelectPlan/> */}
+              <AddOns billing='Monthly'/>
             </div>
           </div>
         </div>
