@@ -22,7 +22,7 @@
   justify-content: space-between;
   text-align: right;
   margin-top: 3rem;
-  margin-right: -1.5rem;;
+margin-right: -0.5rem;
 }
 
 .button-primary {
@@ -242,6 +242,54 @@
   margin: 0.5rem;
 }
 
+.radio-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 0.5rem;
+}
+
+.radio-container {
+  width: 100%;
+  text-align: left;
+}
+
+.radio-input {
+  display:none
+}
+
+.radio-option-card { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin:0 1rem 1rem 0.5rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+}
+
+
+.radio-option-card:hover{
+  border: 1px solid hsl(243, 100%, 62%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.radio-input:checked + .radio-option-card{
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(228, 100%, 84%, 0.25);
+  border-radius: 5px;
+}
+
+.radio-option-card-header {
+  padding: 1rem 5rem 1rem 1rem;
+}
+
+.radio-option-card-label {
+  padding: 2rem 1.5rem 1rem 1rem;
+}
+
 
 .sidebar-bg {
   background-image: url('./assets/images/bg-sidebar-desktop.svg');
@@ -252,4 +300,81 @@
   width: 45%;
   border-radius: 10px;
 
+}
+
+.switch-container {
+  border-radius: 10px;
+  width:100%;
+  background-color:hsl(228, 100%, 84%, 0.15);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.5rem;
+  font-family: 'ubuntu-medium';
+  margin-top: -1rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 30px;
+  margin: 1rem;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(213, 96%, 18%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.switch-label {
+  color: hsl(231, 11%, 63%);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

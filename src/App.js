@@ -1,6 +1,7 @@
 import './App.css';
 import { PersonalInfo } from './components/PersonalInfo';
 import { ProgressIndicator } from './components/ProgressIndicator';
+import { SelectPlan } from './components/SelectPlan';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
               <ProgressIndicator/>
             </div>
             <div className='card-content'>
-              <PersonalInfo/>
+              {/* <PersonalInfo/> */}
+              <SelectPlan/>
             </div>
           </div>
         </div>
