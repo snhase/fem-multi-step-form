@@ -1,4 +1,5 @@
 import './App.css';
+import { PersonalInfo } from './components/PersonalInfo';
 import { ProgressIndicator } from './components/ProgressIndicator';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
               <ProgressIndicator/>
             </div>
             <div className='card-content'>
-      
+              <PersonalInfo/>
             </div>
           </div>
         </div>
