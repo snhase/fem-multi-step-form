@@ -22,7 +22,7 @@
   justify-content: space-between;
   text-align: right;
   margin-top: 2rem;
-  margin-right: -0.5rem;
+  /* margin-right: -0.5rem; */
 }
 
 .button-primary {
@@ -86,20 +86,23 @@
 
 }
 
-.card-content {
+.card-container {
  display: flex;
  flex-direction: column;
  align-content: center;
  padding: 1.5rem 0;
  width: 75%;
- padding-right: 2rem;;
+ padding-right: 2rem;
+}
+
+.card-content {
+  height: 100%;
 }
 
 .card-style {
   display: flex;
   flex-direction: row;
   padding: 1rem;;
-
 }
 
 .card-title {
@@ -230,6 +233,13 @@
   border-bottom: 1px solid hsl(231, 11%, 63%);
 }
 
+hr{
+  width: 100%;
+  margin-top: 1.5rem;
+  color : hsl(231, 11%, 63%)
+
+}
+
 .footer {
   padding: 2rem;
   width: 100%;
@@ -245,7 +255,7 @@
   justify-content: space-between;
   text-align: left;
   width: 80%;
-  height: 85%;
+  height: 78%;
 }
 
 .form-content {
@@ -492,4 +502,86 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.summary-button {
+  background-color: hsl(243, 100%, 62%);
+}
+
+body:has(#summary-link-plan:hover) #summary-btn{
+  opacity: 0.5;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  background-color: hsl(231, 100%, 99%);
+}
+
+.summary-line-amount{
+  margin-top: 1.5rem;
+  font-size: 14px;
+  color: hsl(213, 96%, 18%);
+  font-family: 'ubuntu-medium';
+}
+
+.summary-line-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary-line-info {
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+  margin-top: 1.5rem;
+}
+
+.summary-line-plan {
+  font-family: 'ubuntu-bold';
+  color: hsl(213, 96%, 18%);
+}
+
+.summary-line-plan-link {
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+  text-decoration: underline;
+}
+
+.summary-line-plan-link:hover {
+  color: hsl(243, 100%, 62%);
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.summary-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+}
+
+.summary-total-amount {
+  color: hsl(243, 100%, 62%);
+  font-family: 'ubuntu-bold';
+  font-size: 20px;
+}
+
+.summary-thank-you-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
 }

@@ -5,12 +5,13 @@ import { Switch } from './shared/Switch';
 import {ReactComponent as Arcade} from '../assets/images/icon-arcade.svg'
 import {ReactComponent as Advanced} from '../assets/images/icon-advanced.svg'
 import {ReactComponent as Pro} from '../assets/images/icon-pro.svg'
+import { getPlanCharges } from '../utils';
 
 
 export const SelectPlan = () => {
     
     return (
-      <div className='form-container '>
+      <div className='card-content '>
         <h1 className='card-title'>Select your plan</h1>
         <h4 className='card-subtitle'> You have the option of monthly or yearly billing.</h4>
       <Formik
@@ -42,22 +43,22 @@ export const SelectPlan = () => {
                   name="plan"
                   value="Arcade"
                   label="Arcade"
-                  labelinfo={values.billing?"$90/yr":"$9/mo"}
-                labelpromo={values.billing?"2 months free":""}
+                  labelinfo={'+$'+ String(getPlanCharges(values.billing?'Yearly':'Monthly','Arcade')) +'/' + (values.billing?'yr':'mo')}
+                  labelpromo={values.billing?"2 months free":""}
                   logo={<Arcade/>}>Arcade</RadioButton>
                 <RadioButton
                   name="plan"
                   value="Advanced"
                   label="Advanced"
-                  labelinfo={values.billing?"$120/yr":"$12/mo"}
-                labelpromo={values.billing?"2 months free":""}
+                  labelinfo={'+$'+ String(getPlanCharges(values.billing?'Yearly':'Monthly','Advanced')) +'/' + (values.billing?'yr':'mo')}
+                  labelpromo={values.billing?"2 months free":""}
                   logo={<Advanced/>}>Advanced</RadioButton>
                 <RadioButton
                   name="plan"
                   value="Pro"
                   label="Pro"
-                  labelinfo={values.billing?"$150/yr":"$15/mo"}
-                labelpromo={values.billing?"2 months free":""}
+                  labelinfo={'+$'+ String(getPlanCharges(values.billing?'Yearly':'Monthly','Pro')) +'/' + (values.billing?'yr':'mo')}
+                  labelpromo={values.billing?"2 months free":""}
                   logo={<Pro/>}>Pro</RadioButton>
               </div>
               <Switch

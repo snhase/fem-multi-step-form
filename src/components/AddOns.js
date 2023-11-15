@@ -1,10 +1,11 @@
 import { Formik, Form } from 'formik';
 import { Checkbox } from './shared/Checkbox';
+import { getAddOnCharges } from '../utils';
 
 
 export const AddOns = ({billing}) => {
     return (
-      <div className='form-container '>
+      <div className='card-content'>
         <h1 className='card-title'>Pick add ons</h1>
         <h4 className='card-subtitle'> Add-ons help enhanced your gaming experience.</h4>
       <Formik
@@ -25,20 +26,20 @@ export const AddOns = ({billing}) => {
                 name='service'
                 label='Online Service'
                 labelinfo='Access to multiplayer games'
-                charges={billing === 'Yearly'?'+$10/yr':'+$1/mo'}
+                charges={'+$'+ String(getAddOnCharges(billing,'service')) +'/' + (billing === 'Yearly'?'yr':'mo')}
               >
               </Checkbox>
               <Checkbox
                 name='storage'
                 label='Larger Storage'
                 labelinfo='Extra 1TB of cloud save'
-                charges={billing === 'Yearly'?'+$20/yr':'+$2/mo'}
+                charges={'+$'+ String(getAddOnCharges(billing,'storage')) +'/' + (billing === 'Yearly'?'yr':'mo')}
               ></Checkbox>
               <Checkbox
                 name='profile'
                 label='Customizable Profile'
                 labelinfo='Custome theme on your profile'
-                charges={billing === 'Yearly'?'+$20/yr':'+$2/mo'}
+                charges={'+$'+ String(getAddOnCharges(billing,'profile')) +'/' + (billing === 'Yearly'?'yr':'mo')}
               ></Checkbox>
             </div>
             <div className='button-wrapper'>

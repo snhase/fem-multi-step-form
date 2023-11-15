@@ -6,7 +6,7 @@ import { TextInput } from './shared/TextInput';
 export const PersonalInfo = () => {
     
     return (
-      <div className='form-container'>
+      <div className='card-content'>
         <h1 className='card-title'> Personal info</h1>
         <h4 className='card-subtitle'> Please provide your name, email address, and phone number.</h4>
        
@@ -32,7 +32,7 @@ export const PersonalInfo = () => {
         }, 400);
       }}>
           <Form className='form'>
-            <div>
+            <div className='form-content'>
               <TextInput
                 name="name"
                 label="Name"/>
@@ -42,13 +42,13 @@ export const PersonalInfo = () => {
               <TextInput
                   name="phoneNumber"
                   label="Phone Number"/>
+            </div>
             <div className='button-wrapper-end'>
                 <button
                   type="submit"
                   className='button-primary'
                   >Next Step</button>
-            </div>
-            </div>            
+            </div>           
           </Form>
         {/* )} */}
       </Formik>

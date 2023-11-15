@@ -3,6 +3,7 @@ import { AddOns } from './components/AddOns';
 import { PersonalInfo } from './components/PersonalInfo';
 import { ProgressIndicator } from './components/ProgressIndicator';
 import { SelectPlan } from './components/SelectPlan';
+import { Summary } from './components/Summary';
 
 function App() {
   return (
@@ -13,10 +14,18 @@ function App() {
             <div className='sidebar-bg'>
               <ProgressIndicator/>
             </div>
-            <div className='card-content'>
+            <div className='card-container'>
               {/* <PersonalInfo/> */}
               {/* <SelectPlan/> */}
-              <AddOns billing='Monthly'/>
+              {/* <AddOns billing='Monthly'/> */}
+              <Summary
+                confirmed={false}
+                plan='Pro'
+                billing='Monthly'
+                service={true}
+                storage={true}
+                profile={false}
+                />
             </div>
           </div>
         </div>
