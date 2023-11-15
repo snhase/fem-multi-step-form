@@ -8,7 +8,7 @@ import {ReactComponent as Pro} from '../assets/images/icon-pro.svg'
 import { getPlanCharges } from '../utils';
 
 
-export const SelectPlan = () => {
+export const SelectPlan = ({step, setStep, plan, setPlan, billing, setBilling}) => {
     
     return (
       <div className='card-content '>
@@ -16,13 +16,9 @@ export const SelectPlan = () => {
         <h4 className='card-subtitle'> You have the option of monthly or yearly billing.</h4>
       <Formik
       initialValues={{
-        plan: 'Arcade',
-        billing: false
+        plan: plan? plan: 'Arcade',
+        billing: billing && billing === 'Yearly'? true : false
       }}
-      validationSchema={Yup.object({
-        plan: Yup.string()
-          .required('This field is required'),
-      })}
       onSubmit={(values, { setSubmitting }) => {
         if(values.billing){
           values.billing='Yearly'
@@ -31,7 +27,10 @@ export const SelectPlan = () => {
           values.billing='Monthly'
         }
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
+          console.log(JSON.stringify(values, null, 2))
+          setPlan(values.plan)
+          setBilling(values.billing)
+          setStep(step+1)
           setSubmitting(false);
         }, 400);
       }}>
@@ -66,7 +65,13 @@ export const SelectPlan = () => {
               ></Switch>
             </div>
             <div className='button-wrapper'>
-              <button className='button-secondary'> Go Back</button>
+              <button
+                type="button"
+                className='button-secondary'
+                onClick={()=>{
+                  setStep(step-1)
+                }}
+                > Go Back</button>
                 <button
                   type="submit"
                   className='button-primary'

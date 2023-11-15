@@ -2,7 +2,7 @@
 import {Bs1Circle, Bs2Circle, Bs3Circle, Bs4Circle, BsFill1CircleFill, BsFill2CircleFill, BsFill3CircleFill, BsFill4CircleFill} from 'react-icons/bs'
 
 
-const showIcon = (labelStepNumber, selected) =>{
+const showIcon = (labelStepNumber, selected) => {
     if(selected){
         switch(labelStepNumber){
             case "Step 1" :
@@ -19,7 +19,7 @@ const showIcon = (labelStepNumber, selected) =>{
     else {
         switch(labelStepNumber){
             case "Step 1" :
-               return <Bs1Circle color='hsl(0, 0%, 100%)sl' size='2rem'/>
+               return <Bs1Circle color='hsl(0, 0%, 100%)' size='2rem'/>
             case "Step 2" :
                return <Bs2Circle color='hsl(0, 0%, 100%)' size='2rem'/>
             case "Step 3" :
@@ -58,27 +58,26 @@ const ProgressIndicatorStep = ({selected, labelStepNumber, labelStepName}) => {
 }
 
 
-export const ProgressIndicator = (selected) => { 
-
+export const ProgressIndicator = ({step}) => {
     return(
         <div className='progress-indicator'>
             <ProgressIndicatorStep
-                selected={true}
+                selected={ step === 1 ? true : false}
                 labelStepNumber="Step 1"
                 labelStepName="Your Info"
                 />
             <ProgressIndicatorStep
-                selected={false}
+                selected= {step === 2 ? true : false}
                 labelStepNumber="Step 2"
                 labelStepName="Select Plan"
                 />
             <ProgressIndicatorStep
-                selected={false}
+                selected={step === 3 ? true : false}
                 labelStepNumber="Step 3"
                 labelStepName="Add-ons"
                 />
             <ProgressIndicatorStep
-                selected={false}
+                selected={step === 4 ? true : false}
                 labelStepNumber="Step 4"
                 labelStepName="Summary"
                 />

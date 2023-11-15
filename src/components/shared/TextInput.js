@@ -1,4 +1,5 @@
 import { useField } from 'formik';
+import {PatternFormat} from 'react-number-format'
 
 export const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -11,10 +12,15 @@ export const TextInput = ({ label, ...props }) => {
         {
             meta.touched && meta.error ? 
             <div className='form-text-input-error'>{meta.error}</div>
-            : null
+            : <></>
         }       
       </div>
-      <input className={meta.touched && meta.error ?'text-input-error' :'text-input'} {...field} {...props} />
+      {
+        props.name === 'phoneNumber' ?
+        <PatternFormat className={meta.touched && meta.error ?'text-input-error' :'text-input'} format="+1 ### ### ####"  {...field} {...props} />
+        :
+        <input className={meta.touched && meta.error ?'text-input-error' :'text-input'} {...field} {...props} />
+      }
       
     </>
   );

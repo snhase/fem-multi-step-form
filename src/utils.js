@@ -48,15 +48,15 @@ export const  getAddOnCharges = (billing, addOn) => {
     return addOnCharges;
 }
 
-export const  getTotalAddOnCharges = (billing, service, storage, profile) => {
+export const  getTotalAddOnCharges = (billing, addOns) => {
     let addOnCharges = 0;
-    if(service) {
+    if(addOns && addOns.service) {
         addOnCharges = getAddOnCharges(billing, 'service');
     }
-    if(storage) {
+    if(addOns && addOns.storage) {
         addOnCharges = addOnCharges + getAddOnCharges(billing, 'storage');
     }
-    if(profile) {
+    if(addOns && addOns.profile) {
         addOnCharges =  addOnCharges + getAddOnCharges(billing,'profile');
     }
     return addOnCharges;

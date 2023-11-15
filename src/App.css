@@ -13,7 +13,6 @@
   justify-content: flex-end;
   text-align: right;
   margin-top: 4.5rem;
-  margin-right: -1.5rem;
 }
 
 .button-wrapper{
@@ -22,7 +21,6 @@
   justify-content: space-between;
   text-align: right;
   margin-top: 2rem;
-  /* margin-right: -0.5rem; */
 }
 
 .button-primary {
@@ -46,8 +44,7 @@
   height: 45px;
   min-width: 120px;
   border-radius: 5px;
-  opacity: 80%;
-  font-size: 16.5px;
+  opacity: 0.5
 }
 
 .button-primary:active {
@@ -235,7 +232,7 @@
 
 hr{
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   color : hsl(231, 11%, 63%)
 
 }
@@ -267,16 +264,17 @@ hr{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .form-text-input-error {
   text-align: right;
   color: hsl(354, 84%, 57%);
+  font-family: 'ubuntu-medium';
   font-size: 14px;
 }
 
 .form .text-input {
-  width:100%;
   height: 28px;
   margin: 0.5rem 0 2rem 0;
   padding: 0.5rem 0.75rem;
@@ -297,17 +295,21 @@ hr{
   border: 1px solid  hsl(243, 100%, 62%)
 }
 
-.form .text-input:active {
-  border: 1px solid  hsl(243, 100%, 62%);
+.form .text-input::placeholder {
+  color: hsl(231, 11%, 63%);
+  font-family: 'ubuntu-regular';
+  font-weight: 700;
 }
 
 .form .text-input-error{
-  width:100%;
-  height: 32px;
+  height: 28px;
   margin: 0.5rem 0 2rem 0;
   padding: 0.5rem 0.75rem;
   border: 0.5px solid hsl(354, 84%, 57%);
   border-radius: 5px;
+  font-family: 'ubuntu-medium';
+  color: hsl(213, 96%, 18%);
+  font-size: 16px;
 }
 
 .form .text-input-error:focus-visible {
@@ -429,7 +431,7 @@ hr{
 .switch-container {
   border-radius: 10px;
   width:100%;
-  background-color:hsl(228, 100%, 84%, 0.15);
+  background-color:hsl(231, 100%, 99%);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -506,10 +508,19 @@ input:checked + .slider:before {
 
 .summary-button {
   background-color: hsl(243, 100%, 62%);
+  font-size: 15px;
 }
 
-body:has(#summary-link-plan:hover) #summary-btn{
-  opacity: 0.5;
+.summary-button:hover {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.summary-button:focus-visible {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.summary-button:disabled{
+  background-color: hsl(243, 100%, 62%);
 }
 
 .summary-content {
@@ -526,7 +537,7 @@ body:has(#summary-link-plan:hover) #summary-btn{
 }
 
 .summary-line-amount{
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-size: 14px;
   color: hsl(213, 96%, 18%);
   font-family: 'ubuntu-medium';
@@ -542,7 +553,7 @@ body:has(#summary-link-plan:hover) #summary-btn{
 .summary-line-info {
   font-size: 14px;
   color: hsl(231, 11%, 63%);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .summary-line-plan {
@@ -554,6 +565,7 @@ body:has(#summary-link-plan:hover) #summary-btn{
   font-size: 14px;
   color: hsl(231, 11%, 63%);
   text-decoration: underline;
+  margin: 10px 0;
 }
 
 .summary-line-plan-link:hover {
