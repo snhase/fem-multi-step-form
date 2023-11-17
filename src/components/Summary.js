@@ -26,16 +26,15 @@ export const Summary = ({step, setStep, plan , billing , addOns}) => {
         {
           confirmed?
           <div className="summary-thank-you-container">
-                  <div><ThankYou/></div>
-                <h1 className='card-title'>Thank you!</h1>
-                <h4 className='card-subtitle' style={{padding:"0 4rem"}}> Thanks for confirming your subscription! We hope you have fun using our plaform. If you ever need support, please feel free to email us at support@loremgaming.com.</h4>
-            </div>
+              <div><ThankYou/></div>
+              <h1 className='card-title'>Thank you!</h1>
+              <h4 className='card-subtitle'> Thanks for confirming your subscription! We hope you have fun using our plaform. If you ever need support, please feel free to email us at support@loremgaming.com.</h4>
+          </div>
           :
-          <div className="card-content">
-            <h1 className='card-title'>Finishing up</h1>
-            <h4 className='card-subtitle'> Double-check everything looks OK before confirming.</h4>
             <div className='form'>
-              <div className='summary-content'>
+              <div className='form-content'>
+                <h1 className='card-title'>Finishing up</h1>
+                <h4 className='card-subtitle'> Double-check everything looks OK before confirming.</h4>
                 <div className='summary-details'>
                     <div className="summary-line-details">
                       <div>
@@ -114,7 +113,6 @@ export const Summary = ({step, setStep, plan , billing , addOns}) => {
                     >Confirm</button>
                 </div> 
             </div>
-          </div>
 
         }
       </div>

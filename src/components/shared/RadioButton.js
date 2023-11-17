@@ -11,10 +11,10 @@ export const RadioButton = ({ children, ...props }) => {
             <div className='radio-option-card-header'>{props.logo}</div>
             <div className='radio-option-card-label'>
             <div style={{fontFamily:"ubuntu-medium"}}>{props.label}</div>
-            <div style={{color:'hsl(231, 11%, 63%)',fontSize:'14px', marginTop:'5px'}}>{props.labelinfo}</div>
+            <div className='radio-label-info'>{props.labelinfo}</div>
             {
               props.labelpromo?
-              <div style={{fontSize:'12px', marginTop:'8px'}}>{props.labelpromo}</div>
+              <div className='radio-label-promo'>{props.labelpromo}</div>
               :
               <></>
             }

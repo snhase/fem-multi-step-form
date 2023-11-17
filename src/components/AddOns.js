@@ -6,8 +6,6 @@ import { getAddOnCharges } from '../utils';
 export const AddOns = ({step, setStep, billing, addOns, setAddOns}) => {
     return (
       <div className='card-content'>
-        <h1 className='card-title'>Pick add ons</h1>
-        <h4 className='card-subtitle'> Add-ons help enhance your gaming experience.</h4>
       <Formik
       initialValues={{
         service: addOns && addOns.service ? addOns.service : false,
@@ -24,6 +22,8 @@ export const AddOns = ({step, setStep, billing, addOns, setAddOns}) => {
       }}>
           <Form className='form'>
             <div className='form-content'>
+              <h1 className='card-title'>Pick add ons</h1>
+              <h4 className='card-subtitle'> Add-ons help enhance your gaming experience.</h4>
               <Checkbox
                 name='service'
                 label='Online Service'

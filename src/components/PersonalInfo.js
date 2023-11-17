@@ -6,10 +6,7 @@ import { TextInput } from './shared/TextInput';
 export const PersonalInfo = ({step, setStep, user , setUser }) => {
     
     return (
-      <div className='card-content'>
-        <h1 className='card-title'> Personal info</h1>
-        <h4 className='card-subtitle'> Please provide your name, email address, and phone number.</h4>
-       
+      <div className='card-content'> 
       <Formik
       initialValues={{
         name: user && user.name ? user.name :'',
@@ -51,6 +48,8 @@ export const PersonalInfo = ({step, setStep, user , setUser }) => {
         {({ errors, touched, isSubmitting }) => (
           <Form className ='form'>
             <div className ='form-content'>
+              <h1 className='card-title'> Personal info</h1>
+              <h4 className='card-subtitle'> Please provide your name, email address, and phone number.</h4>
               <TextInput
                 name = "name"
                 label = "Name"

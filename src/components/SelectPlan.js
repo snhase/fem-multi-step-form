@@ -12,8 +12,6 @@ export const SelectPlan = ({step, setStep, plan, setPlan, billing, setBilling}) 
     
     return (
       <div className='card-content '>
-        <h1 className='card-title'>Select your plan</h1>
-        <h4 className='card-subtitle'> You have the option of monthly or yearly billing.</h4>
       <Formik
       initialValues={{
         plan: plan? plan: 'Arcade',
@@ -37,6 +35,8 @@ export const SelectPlan = ({step, setStep, plan, setPlan, billing, setBilling}) 
          {({ values }) => (
           <Form className='form'>
             <div className='form-content'>
+            <h1 className='card-title'>Select your plan</h1>
+            <h4 className='card-subtitle'> You have the option of monthly or yearly billing.</h4>
               <div className='radio-form'>
                 <RadioButton
                   name="plan"

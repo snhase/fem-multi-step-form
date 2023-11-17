@@ -17,8 +17,17 @@
 body {
   margin: 0;
   font-family:'ubuntu-regular';
-  font-size: 16px;
+  font-size: 14px;
 }
+
+@media screen and (min-width: 510px) {
+  body {
+    margin: 0;
+    font-family:'ubuntu-regular';
+    font-size: 16px;
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
