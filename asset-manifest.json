@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fem-multi-step-form/static/css/main.85490c36.css",
+    "main.js": "/fem-multi-step-form/static/js/main.5a6eb853.js",
+    "static/media/Ubuntu-Regular.ttf": "/fem-multi-step-form/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
+    "static/media/Ubuntu-Medium.ttf": "/fem-multi-step-form/static/media/Ubuntu-Medium.e37c5546eb1a6efc4818.ttf",
+    "static/media/Ubuntu-Bold.ttf": "/fem-multi-step-form/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
+    "static/media/bg-sidebar-desktop.svg": "/fem-multi-step-form/static/media/bg-sidebar-desktop.6918153f38678372ceb1.svg",
+    "static/media/bg-sidebar-mobile.svg": "/fem-multi-step-form/static/media/bg-sidebar-mobile.ad41661b40ca0b967f3a.svg",
+    "static/media/icon-advanced.svg": "/fem-multi-step-form/static/media/icon-advanced.705bd10c4c1f688871d729633f0ca4ae.svg",
+    "static/media/icon-thank-you.svg": "/fem-multi-step-form/static/media/icon-thank-you.ee753f231cc5a5789b8eb922a96472c0.svg",
+    "static/media/icon-pro.svg": "/fem-multi-step-form/static/media/icon-pro.2e7e377da9c658d608624304a0f8dae6.svg",
+    "index.html": "/fem-multi-step-form/index.html",
+    "static/media/icon-arcade.svg": "/fem-multi-step-form/static/media/icon-arcade.a08c098289a31bb2f66d675be71565b3.svg",
+    "main.85490c36.css.map": "/fem-multi-step-form/static/css/main.85490c36.css.map",
+    "main.5a6eb853.js.map": "/fem-multi-step-form/static/js/main.5a6eb853.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85490c36.css",
+    "static/js/main.5a6eb853.js"
+  ]
+}
