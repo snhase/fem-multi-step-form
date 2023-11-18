@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github repo](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Github repo](https://github.com/snhase/fem-multi-step-form)
+- Live Site URL: [Live Site](https://snhase.github.io/fem-multi-step-form)
 
 ## My process
 
